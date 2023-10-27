@@ -1,0 +1,18 @@
+1. Create a small e-commerce website with a dummy payment system (you are free to take
+assumptions in this project).
+2. The website should have pages: Home, Products and Cart.
+3. The Home page should display all the product items currently available, with their name
+and price.
+4. Clicking on any product card in the Home page should redirect to that product's single
+page, where you can see a description about the product and a link to purchase it.
+5. The product single page should also show the number of previous orders and set a limit
+on the number of products that can be sold (this must be stored in local storage). When
+all products are sold, make the item unavailable. If items are available, give two options:
+add to cart and buy now.
+6. The Purchase List page should show all the items that have been purchased. There can
+be an extra option to cancel purchases (optional).
+7. The Cart page should show all the items that have been added to the cart. Here, you
+can purchase the item or remove it from the cart.
+8. The website should have a navbar to navigate between the different pages.
+9. Once you have finished building the website, launch it on Firebase.
+10. You are free to add any additional features. We’ll be happy to see creativity
