@@ -25,17 +25,20 @@ export default async function Home({
 }: {
 	searchParams: { [key: string]: string };
 }) {
-	const pageNumber = Number(searchParams.page) || 0;
+	const pageNumber = Number(searchParams.page) || 1;
 	const products = await getProducts(pageNumber);
 
 	const productCount = products.total;
+	if(searchParams.page){
+		
+	}
 
 	//defalut static limit
 	const limit = 6;
 
 	const pageCount = Math.ceil(productCount / limit);
 
-	const pages = Array(pageCount) 
+	const pages = Array(pageCount)
 		.fill(0)
 		.map((_, index) => index + 1);
 
