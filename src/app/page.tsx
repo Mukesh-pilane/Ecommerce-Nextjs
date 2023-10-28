@@ -3,7 +3,7 @@ import SideNavbar from "@/components/SideNavbar";
 import { TProduct } from "@/types";
 import Link from "next/link";
 
-const url = process.env.API_URL as string;
+const url = process.env.VERCEL_URL as string;
 
 
 type ServerResponse = {
