@@ -25,7 +25,7 @@ export default async function Home({
 }: {
 	searchParams: { [key: string]: string };
 }) {
-	const pageNumber = Number(searchParams.page);
+	const pageNumber = Number(searchParams.page) || 0;
 	const products = await getProducts(pageNumber);
 
 	const productCount = products.total;
