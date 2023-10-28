@@ -48,6 +48,6 @@ export const authOptions: AuthOptions = {
 		signIn: "/login",
 	},
 
-	secret: process.env.NEXTAUTH_SECRET,
+	secret: "8d7d81f72ef721c74844ff70b10ff182",
 	debug: process.env.NODE_ENV === "development",
 };
