@@ -3,7 +3,7 @@ import { TProduct } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-const url = process.env.VERCEL_URL as string;
+const url = process.env.API_URL as string;
 
 //fetch product by category
 

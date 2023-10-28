@@ -4,7 +4,7 @@ import ProductRating from "@/components/Rating";
 import ProductSlider from "@/components/ProductSlider";
 import { TProduct } from "@/types";
 
-const url = process.env.VERCEL_URL!;
+const url = process.env.API_URL!;
 
 type Props = {
 	product: TProduct;

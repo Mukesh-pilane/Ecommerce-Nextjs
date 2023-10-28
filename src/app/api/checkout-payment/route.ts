@@ -2,7 +2,7 @@ import { TProduct } from "@/types";
 import { NextResponse } from "next/server";
 
 const key = process.env.STRIPE_WEBHOOK_SECRET! as string;
-const url = process.env.VERCEL_URL! as string;
+const url = process.env.API_URL! as string;
 const stripe = require("stripe")(
 	key
 );
@@ -28,8 +28,8 @@ export async function POST(req: Request) {
 			payment_method_types: ["card"],
 			line_items: lineItems,
 			mode: "payment",
-			success_url: `${process.env.VERCEL_URL!}/success?session_id={CHECKOUT_SESSION_ID}`, //"http://localhost:3000/success",
-			cancel_url: `${process.env.VERCEL_URL!}/cancel?session_id={CHECKOUT_SESSION_ID}`,
+			success_url: `${process.env.API_URL!}/success?session_id={CHECKOUT_SESSION_ID}`, //"http://localhost:3000/success",
+			cancel_url: `${process.env.API_URL!}/cancel?session_id={CHECKOUT_SESSION_ID}`,
 		});
 		return NextResponse.json({ id: session.id });
 	} catch (error) {
