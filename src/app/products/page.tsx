@@ -14,14 +14,14 @@ type ServerResponse = {
 	total: number;
 };
 const getProducts = async (category: string): Promise<ServerResponse> => {
-	const response = await fetch(`${url}/api/products?category=${category}`, {
+	const response = await fetch(`${url}api/products?category=${category}`, {
 		cache: "no-store",
 	});
 	return await response.json();
 };
 
 const getSearch = async (search: string): Promise<ServerResponse> => {
-	const response = await fetch(`${url}/api/products?search=${search}`, {
+	const response = await fetch(`${url}api/products?search=${search}`, {
 		cache: "no-store",
 	});
 

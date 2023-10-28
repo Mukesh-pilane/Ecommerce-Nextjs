@@ -13,7 +13,7 @@ type ServerResponse = {
 
 //fetch product by category
 const getProducts = async (page: number): Promise<ServerResponse> => {
-	const response = await fetch(`${url}/api/products?page=${page}`, {
+	const response = await fetch(`${url}api/products?page=${page}`, {
 		cache: "no-cache",
 	});
 
