@@ -35,7 +35,7 @@ export default async function Home({
 
 	const pageCount = Math.ceil(productCount / limit);
 
-	const pages = Array(pageCount)
+	const pages = Array(pageCount) 
 		.fill(0)
 		.map((_, index) => index + 1);
 
