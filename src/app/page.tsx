@@ -25,7 +25,7 @@ export default async function Home({
 }: {
 	searchParams: { [key: string]: string };
 }) {
-	const pageNumber = Number(searchParams.page) || 1;
+	const pageNumber = Number(searchParams.page);
 	const products = await getProducts(pageNumber);
 
 	const productCount = products.total;
@@ -38,10 +38,14 @@ export default async function Home({
 
 	const pageCount = Math.ceil(productCount / limit);
 
-	const pages = Array(pageCount)
-		.fill(0)
-		.map((_, index) => index + 1);
+	let pages : any[];
 
+	if (pageCount >= 0) {
+	  pages = Array(pageCount).fill(0).map((_, index) => index + 1);
+	} else {
+	  pages = [0];
+	}
+	
 	return (
 		<section className="flex flex-col md:flex-row gap-2">
 			<aside className="w-full md:w-[220px] shrink-0">
