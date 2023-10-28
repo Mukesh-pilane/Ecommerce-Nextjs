@@ -11,7 +11,7 @@ type Props = {
 };
 
 const getSingleProduct = async (slug: string): Promise<TProduct> => {
-	const response = await fetch(`${url}api/products/${slug}`, {
+	const response = await fetch(`${url}/api/products/${slug}`, {
 		cache: "no-store",
 	});
 
