@@ -38,13 +38,9 @@ export default async function Home({
 
 	const pageCount = Math.ceil(productCount / limit);
 
-	let pages : any[];
 
-	if (pageCount >= 0) {
-	  pages = Array(pageCount).fill(0).map((_, index) => index + 1);
-	} else {
-	  pages = [0];
-	}
+	const pages = Array(pageCount).fill(0).map((_, index) => index + 1);
+	
 	
 	return (
 		<section className="flex flex-col md:flex-row gap-2">
